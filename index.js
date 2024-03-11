@@ -5,9 +5,16 @@ const jwt = require("jsonwebtoken");
 const path = require("path");
 const cors = require("cors");
 
-const PORT =  8080;
+const PORT = process.env.PORT || 8080; // Use the provided PORT or default to 8080
+
 app.use(express.json());
-app.use(cors());
+
+const corsOptions = {
+  origin: 'https://shopper-sdib.onrender.com',
+};
+
+app.use(cors(corsOptions));
+
 
 
 //Datbase Connection
