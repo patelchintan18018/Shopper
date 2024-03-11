@@ -8,13 +8,7 @@ const cors = require("cors");
 const PORT = process.env.PORT || 8080; // Use the provided PORT or default to 8080
 
 app.use(express.json());
-
-const corsOptions = {
-  origin: 'https://shopper-sdib.onrender.com',
-};
-
-app.use(cors(corsOptions));
-
+app.use(cors());
 
 
 //Datbase Connection
