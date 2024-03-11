@@ -26,7 +26,7 @@ function Signup() {
         e.preventDefault();
         setError("")
         try{
-          const {data} = await axios.post(`https://shopper-sdib.onrender.com/api/register`, {username:formData.username,email:formData.email,password:formData.password});
+          const {data} = await axios.post(`http://localhost:8080/api/register`, {username:formData.username,email:formData.email,password:formData.password});
           if(!data.success){
             setError(data.message);
             
