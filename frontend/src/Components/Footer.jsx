@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../Assets/logo.png'
 import { NavLink } from 'react-router-dom';
+import { Link } from 'react-scroll';
 
 
 function Footer() {
@@ -12,10 +13,10 @@ function Footer() {
         </div>
         <ul className="footer-links sm:flex flex-rows grid grid-cols-1 justify-center items-center mb-7" >
             <li className='mx-5 hover:text-red-500'>
-                <NavLink to='/'> Company</NavLink>
+                <Link to='heroID' smooth={true} offset={-50}> Company</Link>
             </li>
             <li className='mx-5 hover:text-red-500'>
-            <NavLink to='/product'>Products</NavLink>
+            <Link to="NewCollections" smooth={true} offset={-50}>Products</Link>
             </li>
             <li className='mx-5 hover:text-red-500'>
             <NavLink to='/offices'>Offices</NavLink>

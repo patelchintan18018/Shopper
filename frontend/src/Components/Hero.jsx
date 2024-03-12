@@ -1,13 +1,13 @@
 import React from "react";
 import hero_image from "../Assets/hero_image.png";
-import {Link} from 'react-scroll'
+import {Link} from 'react-scroll';
 
 function Hero() {
   
 
   return (
     <>
-      <div className="hero h-full grid grid-cols-1 md:grid-cols-2  items-center bg-gradient-to-b from-violet-200 to-white-500 p-5 md:px-10">
+      <div id="heroID" className="hero h-full grid grid-cols-1 md:grid-cols-2  items-center bg-gradient-to-b from-violet-200 to-white-500 p-5 md:px-10">
         <div className="hero-left text-center   text-xl sm:text-2xl">
           <h3 className="mb-8 font-semibold">NEW ARRIVALS ONLY</h3>
           <h1 className="mb-3 font-bold text-4xl sm:text-5xl md:text-6xl">

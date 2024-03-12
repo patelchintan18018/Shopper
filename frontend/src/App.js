@@ -14,6 +14,9 @@ import women_banner from './Assets/banner_women.png';
 import kid_banner from './Assets/banner_kids.png';
 import Signup from "./Pages/Signup";
 import Login from "./Pages/Login";
+import Office from "./Components/Office";
+import About from "./Components/About";
+import Contact from "./Components/Contact";
 
 function App() {
   return (
@@ -29,10 +32,12 @@ function App() {
             <Route path="/product" element={<Product />}>
               <Route path=":productId" element={<Product />}></Route>
             </Route>
-            {/* <Route path="/SignUp" element={<LoginSignup />} /> */}
             <Route path="/SignUp" element={<Signup />} />
             <Route path="/Login" element={<Login />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/office" element={<Office/>} />
+            <Route path="/about" element={<About/>} />
+            <Route path="/contact" element={<Contact/>} />
           </Routes>
           <Footer />
         </BrowserRouter>
