@@ -3,7 +3,7 @@ import data_product from '../Assets/data';
 import Item from './Item';
 
 function Popular() {
-    console.log(data_product)
+    // console.log(data_product)
   return (
     
     <>
