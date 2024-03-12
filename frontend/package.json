@@ -1,6 +1,6 @@
 {
   "name": "frontend",
-  "proxy": "https://shopper-zr85.onrender.com",
+  "proxy": "https://shopper-bmf1.onrender.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
