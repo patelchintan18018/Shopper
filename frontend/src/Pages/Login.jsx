@@ -24,7 +24,7 @@ function Login() {
         e.preventDefault();
         setError("")
         try{
-          const {data} = await axios.post("https://shopper-ul3m.onrender.com/api/login" , {email:formData.email, password : formData.password});
+          const {data} = await axios.post("/api/login" , {email:formData.email, password : formData.password});
           if(data.success){
             alert("User login Successfully");
             navigate('/');
