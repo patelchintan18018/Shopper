@@ -8,6 +8,7 @@ const cors = require("cors");
 const PORT = process.env.PORT || 8080;
 const authRoutes = require("./routes/authRoutes");
 
+
 app.use(express.json());
 app.use(cors());
 
@@ -19,6 +20,7 @@ app.get("*", (req, res) => {
 });
 
 app.use("/api", authRoutes);
+
 
 app.listen(PORT, (err) => {
   if (!err) {
