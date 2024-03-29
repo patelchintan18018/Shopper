@@ -44,18 +44,22 @@ exports.loginUser = async (req, res) => {
     }
     let passwordcheck = req.body.password === user.password;
     if (passwordcheck) {
+      //this user object will get after jwt token verification
       const data = {
         user: {
           id: user.id,
         },
       };
       const token = jwt.sign(data, "secret-ecom");
-      res.json({
+      const {name, email} = user;
+
+      res.status(200).json({
         success: true,
         token,
+        user :{name, email}
       });
     } else {
-      res.json({
+      res.status(400).json({
         success: false,
         message: "Wrong password",
       });

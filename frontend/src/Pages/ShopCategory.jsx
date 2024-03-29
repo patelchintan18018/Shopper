@@ -1,9 +1,15 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import Item from "../Components/Item";
+import { getAllProducts } from "../Store/productSlice";
 
 function ShopCategory({ category, banner }) {
-  const { all_products } = useSelector((state) => state.all_products);
+  const { all_products }  = useSelector((state) => state.all_products);
+  const dispatch = useDispatch();
+
+  useEffect(()=>{
+    dispatch(getAllProducts());
+  },[])
 
   return (
     <>

@@ -4,6 +4,7 @@ const app = express();
 const mongoose = require("mongoose");
 const path = require("path");
 const cors = require("cors");
+const Products = require("./models/Products");
 
 const PORT = process.env.PORT || 8080;
 const authRoutes = require("./routes/authRoutes");
@@ -14,12 +15,12 @@ app.use(cors());
 
 mongoose.connect("mongodb+srv://backend:backend123@cluster0.e1t0luz.mongodb.net/ecommerce");
 
+app.use("/api", authRoutes);
+
 app.use(express.static(path.join(__dirname, "./frontend/build")));
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./frontend/build/index.html"));
 });
-
-app.use("/api", authRoutes);
 
 
 app.listen(PORT, (err) => {

@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 function Login() {
 
     const navigate = useNavigate();
+    
 
     const [formData, setformData] = useState({
         email : "",
@@ -27,6 +28,7 @@ function Login() {
           const {data} = await axios.post("/api/login" , {email:formData.email, password : formData.password});
           if(data.success){
             alert("User login Successfully");
+            console.log(data);
             navigate('/');
           }else{
             setError(data.message)
